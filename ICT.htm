@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Travel Guide to Manchester</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            overflow-x: hidden;
+        }
+        h1, h2, h3 {
+            text-align: center;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .animate-left {
+            animation: slideIn 1s ease-out;
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .scroll-section {
+            padding: 80px 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        .scroll-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .scroll-section img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #333;
+            padding: 10px 0;
+            color: #fff;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #444;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 20px 0;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#intro">Introduction</a>
+        <a href="#sights">Sights</a>
+        <a href="#food">Food</a>
+        <a href="#nightlife">Nightlife</a>
+        <a href="#about">About Me</a>
+    </nav>
+
+    <!-- Introduction Section -->
+    <section id="intro" class="scroll-section fade-in">
+        <h1>Your Ultimate Travel Guide to Manchester</h1>
+        <p>Discover the rich history, exciting culture, and vibrant streets of Manchester!</p>
+
+    </section>
+
+    <!-- Sights Section -->
+    <section id="sights" class="scroll-section fade-in">
+        <h2>Top Sights in Manchester</h2>
+        <p>From iconic buildings to hidden gems, here’s where you’ll want to go:</p>
+        <div>
+            <h3>Manchester Museum</h3>
+            <p>Explore fascinating exhibits that tell the story of Manchester's past and present.</p>
+        </div>
+        <div>
+            <h3>Old Trafford Stadium</h3>
+
+            <p>Visit the home of Manchester United Football Club and experience the thrill of the game.</p>
+        </div>
+    </section>
+
+    <!-- Food Section -->
+    <section id="food" class="scroll-section fade-in">
+        <h2>Delicious Food Spots</h2>
+        <p>Manchester offers a variety of culinary delights, from street food to fine dining.</p>
+        <div>
+            <h3>Rudy's Pizza</h3>
+      
+            <p>Famous for its wood-fired pizzas, this is a must-try for any pizza lover!</p>
+        </div>
+        <div>
+            <h3>Fress Restaurant</h3>
+          
+            <p>Enjoy modern British food in a chic setting with a cozy vibe.</p>
+        </div>
+    </section>
+
+    <!-- Nightlife Section -->
+    <section id="nightlife" class="scroll-section fade-in">
+        <h2>Nightlife in Manchester</h2>
+        <p>Manchester is renowned for its vibrant nightlife scene. Whether you're into clubs or casual bars, there's something for everyone.</p>
+        <div>
+            <h3>The Warehouse Project</h3>
+        
+            <p>A world-famous underground venue known for its incredible electronic music events.</p>
+        </div>
+        <div>
+            <h3>Cloud 23</h3>
+            <p>Take in stunning views of the city while sipping on cocktails at one of Manchester's highest bars.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="scroll-section fade-in">
+        <h2>About Me</h2>
+        <p>Hello! I’m Anas Hisham and Youssef Ibrahim, a Manchester enthusiast. I’ve traveled the city and compiled this guide to help you experience the best the city has to offer!</p>
+    </section>
+
+  
+    <footer>
+        <p>© 2025 Your Travel Guide to Manchester. All Rights Reserved.</p>
+    </footer>
+
+    
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
